@@ -1,0 +1,118 @@
+%Base Content generated with the help of AI.
+
+\documentclass{beamer}
+\usepackage{listings}
+% Presentation theme
+\usetheme{default}
+\usecolortheme{seagull}
+% Listings settings for code display
+\lstset{
+    basicstyle=\ttfamily,
+    columns=fullflexible,
+    frame=single,
+    breaklines=true
+}
+% Title slide
+\title{Pros and Cons of Using LaTeX}
+\author{Your Name}
+\date{\today}
+
+
+\begin{document}
+
+\begin{frame}
+    \titlepage
+\end{frame}
+
+% Pros slides
+\begin{frame}{Beautiful Professional Typesetting}
+    I only had to type this text and LaTeX rendered it beautifully on this slide. I didn't even have to choose the font. 
+    \begin{example}
+    I can also choose from built-in modules and templates, like this "example" environment. 
+    \end{example}
+\end{frame}
+
+\begin{frame}{Equations in LaTeX}
+Equations can be embedded in-line
+\begin{example}
+    The famous equation: $E=mc^2$
+\end{example}
+or
+\begin{example}
+    They can be given their own space on the page (and auto-numbered)
+    \begin{equation}
+        F = G \cdot \frac{m_1 \cdot m_2}{r^2}
+    \end{equation}
+\end{example}
+\end{frame}
+
+\begin{frame}[fragile]{Embed code snippets}\label{slide:code}
+    Use the \lstinline|listings| package to embed code snippets.
+    \begin{example}
+      \begin{lstlisting}[mathescape]
+    \begin{equation}
+        F = G \cdot \frac{m_1 \cdot m_2}{r^2}
+    \end{equation}
+    \end{lstlisting} will render this popular equation \cite{einstein1905}
+    \begin{equation}\label{eq:example}
+        F = G \cdot \frac{m_1 \cdot m_2}{r^2}
+    \end{equation}
+    
+    \end{example}
+    
+    
+\end{frame}
+\begin{frame}{Cross-Referencing}
+    LaTeX enables accurate cross-referencing of figures, tables, equations, and sections, maintaining consistency and reducing errors.
+    
+    \begin{example}
+        LaTeX allows easy cross-referencing to equations, such as Equation~\ref{eq:example} from the slide \ref{slide:code}.
+    \end{example}
+\end{frame}
+
+\begin{frame}{Version Control}
+   Plain text-files are ideal for Git. Can also use overleaf and other tools.
+    
+    \begin{example}
+        Collaborators can use Git to track changes in a LaTeX document over time.
+    \end{example}
+\end{frame}
+
+\begin{frame}{Customization}
+    LaTeX offers extensive customization options for formatting and styling, allowing you to create unique and professional-looking documents.
+    
+    \begin{example}
+        Customize the document layout, fonts, colors, and more to create a distinctive style.
+    \end{example}
+\end{frame}
+
+\begin{frame}{Community and Templates}
+    LaTeX has a vast community, providing resources, templates, and packages that simplify tasks and enhance document appearance.
+    
+    \begin{example}
+        Utilize LaTeX templates for presentations, research papers, CVs, and more, shared by the community.
+    \end{example}
+\end{frame}
+
+\begin{frame}{References}\label{slide:references}
+Finally, it's super-simple to embed and format citations \cite{latexcompanion}
+\begin{example}
+    \bibliographystyle{ieeetr}
+    \bibliography{example_bib}
+\end{example}
+\end{frame}
+
+% Cons slide
+\begin{frame}{Cons}
+    \begin{itemize}
+        \item Learning Curve
+        \item Real-Time Collaboration
+        \item WYSIWYG Limitations
+        \item Limited Graphics Support
+        \item Complex Layouts
+        \item Customization Complexity
+        \item Document Maintenance
+    \end{itemize}
+\end{frame}
+
+\end{document}
